@@ -24,9 +24,9 @@ public class DynamicProxy implements InvocationHandler {
   @Override
   public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
     System.out.printf("=====我是方法(%s)的切面逻辑 pre=====\n",method.getName());
+    //注意这里invoke中传入的是targetObj而不是proxy 调用的是实际目标类的方法
     Object invoke = method.invoke(targetObj, args);
     System.out.printf("=====我是方法(%s)的切面逻辑 after=====\n",method.getName());
-    //注意这里invoke中传入的是targetObj而不是proxy 调用的是实际目标类的方法
     return invoke;
   }
 }

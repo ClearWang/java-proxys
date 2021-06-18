@@ -13,6 +13,7 @@ public class CglibDynamicProxyClient {
     public static void main(String[] args){
       CglibDynamicProxy cglibDynamicProxy = new CglibDynamicProxy();
       OrderService orderService = (OrderService)cglibDynamicProxy.newInstance(new OrderService());
-      orderService.saveOrders();
+      //orderService.saveOrders();
+      orderService.pay();
     }
 }

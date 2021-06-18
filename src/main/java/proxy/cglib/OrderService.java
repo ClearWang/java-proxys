@@ -10,4 +10,8 @@ public class OrderService {
   public void saveOrders() {
     System.out.println("订单服务！下单成功 单号 111111");
   }
+
+  public void pay() {
+    System.out.println("订单服务！付款成功 流水号 222222");
+  }
 }
